@@ -235,74 +235,31 @@ const SpyLanding = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">
-              O que nossos usuários descobriram
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Histórias reais de pessoas que descobriram a verdade
-            </p>
-          </div>
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-12">O que nossos usuários estão dizendo</h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-card/50 backdrop-blur">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="font-bold">J</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Júlia, SP</h4>
-                    <div className="flex text-warning">
-                      {"★".repeat(5)}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "Descobri que ele trocava mensagens com uma ex. Esse app abriu meus olhos. Agora sei a verdade."
-                </p>
-              </CardContent>
-            </Card>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="bg-card/80 backdrop-blur rounded-xl p-8 border border-border">
+              <p className="text-xl italic text-muted-foreground mb-4">
+                "Descobri mensagens entre ele e uma ex que ele jurava que nem falava mais. Se não fosse esse app, eu ainda estaria sendo enganada."
+              </p>
+              <p className="font-bold text-foreground">— Juliana, RJ</p>
+            </div>
 
-            <Card className="bg-card/50 backdrop-blur">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="font-bold">M</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Marcos, RJ</h4>
-                    <div className="flex text-warning">
-                      {"★".repeat(5)}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "Ela disse que não tinha Instagram, mas estava curtindo fotos de outros caras. Obrigado por me mostrar isso."
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-card/80 backdrop-blur rounded-xl p-8 border border-border">
+              <p className="text-xl italic text-muted-foreground mb-4">
+                "Ela dizia que era só amigo… até eu ver os directs. Foi quando decidi terminar de vez."
+              </p>
+              <p className="font-bold text-foreground">— Carlos, SP</p>
+            </div>
 
-            <Card className="bg-card/50 backdrop-blur">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="h-12 w-12 bg-primary/20 rounded-full flex items-center justify-center">
-                    <span className="font-bold">A</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold">Ana, MG</h4>
-                    <div className="flex text-warning">
-                      {"★".repeat(5)}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-muted-foreground italic">
-                  "Finalmente consegui provas do que eu suspeitava. Não precisei mais viver na dúvida."
-                </p>
-              </CardContent>
-            </Card>
+            <div className="bg-card/80 backdrop-blur rounded-xl p-8 border border-border">
+              <p className="text-xl italic text-muted-foreground mb-4">
+                "Eu vivia na dúvida. Agora, com esse app, tenho certeza de tudo o que acontece quando não estou por perto."
+              </p>
+              <p className="font-bold text-foreground">— Bianca, MG</p>
+            </div>
           </div>
         </div>
       </section>
