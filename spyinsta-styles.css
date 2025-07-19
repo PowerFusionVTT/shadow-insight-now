@@ -1,0 +1,573 @@
+/* SpyInsta Landing Page Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa;
+}
+
+/* Container */
+.spy-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Utility Classes */
+.spy-text-primary { color: #6366f1; }
+.spy-text-accent { color: #f59e0b; }
+.spy-text-success { color: #10b981; }
+.spy-text-danger { color: #ef4444; }
+.spy-text-warning { color: #f59e0b; }
+.spy-font-semibold { font-weight: 600; }
+.spy-mb-4 { margin-bottom: 16px; }
+.spy-mb-8 { margin-bottom: 32px; }
+
+/* Background Utilities */
+.spy-bg-primary { background: rgba(99, 102, 241, 0.2); }
+.spy-bg-danger { background: rgba(239, 68, 68, 0.2); }
+.spy-bg-warning { background: rgba(245, 158, 11, 0.2); }
+
+/* Header Styles */
+.spy-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 0;
+}
+
+.spy-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spy-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.spy-header-badges {
+    display: flex;
+    gap: 16px;
+}
+
+.spy-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    animation: spy-pulse 2s infinite;
+}
+
+.spy-badge-secondary {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.spy-badge-outline {
+    border: 1px solid #d1d5db;
+    background: transparent;
+}
+
+@keyframes spy-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+/* Hero Section */
+.spy-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.spy-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>');
+    opacity: 0.3;
+}
+
+.spy-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.spy-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.spy-rating-badge {
+    background: rgba(99, 102, 241, 0.2);
+    border: 1px solid #6366f1;
+    color: #6366f1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.spy-users-count {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.spy-hero-title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.spy-hero-subtitle {
+    font-size: 24px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+}
+
+.spy-feature-list {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.spy-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+.spy-feature-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.spy-cta-button {
+    background: #f59e0b;
+    color: white;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: spy-pulse-glow 2s infinite;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.spy-cta-button:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+}
+
+@keyframes spy-pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(245, 158, 11, 0.6); }
+}
+
+.spy-trust-seals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+}
+
+.spy-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.spy-trust-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    padding: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.spy-trust-box-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.spy-trust-box-text {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.spy-hero-image {
+    text-align: center;
+}
+
+.spy-phone-mockup {
+    width: 400px;
+    height: 600px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 24px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Benefits Section */
+.spy-benefits {
+    padding: 80px 0;
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.spy-section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.spy-section-subtitle {
+    text-align: center;
+    font-size: 20px;
+    color: #6b7280;
+    margin-bottom: 64px;
+}
+
+.spy-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.spy-benefit-card {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.spy-benefit-card:hover {
+    border-color: rgba(99, 102, 241, 0.4);
+    transform: translateY(-4px);
+}
+
+.spy-benefit-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+
+.spy-benefit-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.spy-benefit-description {
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+/* Security Section */
+.spy-security {
+    padding: 80px 0;
+    background: rgba(16, 185, 129, 0.05);
+    text-align: center;
+}
+
+.spy-security-card {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 24px;
+    padding: 48px;
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(10px);
+}
+
+.spy-security-icon {
+    font-size: 64px;
+    margin: 0 auto 24px;
+    display: block;
+}
+
+.spy-security-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+    text-align: left;
+}
+
+.spy-security-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.spy-security-feature-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.spy-security-feature-desc {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Testimonials Section */
+.spy-testimonials {
+    padding: 80px 0;
+    background: rgba(107, 114, 128, 0.05);
+}
+
+.spy-testimonials-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spy-testimonial {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e5e7eb;
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.spy-testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.spy-testimonial-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.spy-avatar-purple { background: linear-gradient(135deg, #8b5cf6, #ec4899); }
+.spy-avatar-blue { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
+.spy-avatar-pink { background: linear-gradient(135deg, #ec4899, #f43f5e); }
+
+.spy-testimonial-info {
+    flex: 1;
+}
+
+.spy-testimonial-username {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.spy-testimonial-date {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.spy-testimonial-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.spy-testimonial-stats {
+    display: flex;
+    gap: 24px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Final CTA Section */
+.spy-final-cta {
+    padding: 80px 0;
+    background: rgba(99, 102, 241, 0.1);
+    text-align: center;
+}
+
+.spy-final-cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.spy-final-cta-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.spy-final-cta-subtitle {
+    font-size: 20px;
+    color: #6b7280;
+    margin-bottom: 48px;
+}
+
+.spy-final-features {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.spy-final-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Footer */
+.spy-footer {
+    background: #1f2937;
+    color: white;
+    padding: 48px 0;
+}
+
+.spy-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.spy-footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.spy-footer-text {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+/* Icons (using Unicode symbols for simplicity) */
+.spy-icon-eye::before { content: "👁️"; }
+.spy-icon-search::before { content: "🔍"; }
+.spy-icon-heart::before { content: "❤️"; }
+.spy-icon-message::before { content: "💬"; }
+.spy-icon-camera::before { content: "📸"; }
+.spy-icon-alert::before { content: "⚠️"; }
+.spy-icon-check::before { content: "✅"; }
+.spy-icon-users::before { content: "👥"; }
+.spy-icon-clock::before { content: "⏰"; }
+.spy-icon-shield::before { content: "🛡️"; }
+.spy-icon-zap::before { content: "⚡"; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .spy-hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .spy-hero-title {
+        font-size: 32px;
+    }
+
+    .spy-hero-subtitle {
+        font-size: 18px;
+    }
+
+    .spy-section-title {
+        font-size: 32px;
+    }
+
+    .spy-final-cta-title {
+        font-size: 32px;
+    }
+
+    .spy-header-badges {
+        display: none;
+    }
+
+    .spy-trust-seals {
+        justify-content: center;
+    }
+
+    .spy-final-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spy-phone-mockup {
+        width: 300px;
+        height: 450px;
+        font-size: 16px;
+    }
+
+    .spy-cta-button {
+        width: 100%;
+    }
+
+    .spy-social-proof {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
