@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Eye, Search, Shield, Heart, MessageSquare, Camera, AlertTriangle, CheckCircle, Users, Clock, Zap } from "lucide-react";
 import heroImage from "@/assets/hero-suspicion.jpg";
-import phoneMockup from "@/assets/phone-mockup.png";
+import phoneMockup from "@/assets/phone-mockup-pt.png";
 
 const SpyLanding = () => {
   return (
@@ -239,26 +239,62 @@ const SpyLanding = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-12">O que nossos usuários estão dizendo</h2>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="bg-card/80 backdrop-blur rounded-xl p-8 border border-border">
-              <p className="text-xl italic text-muted-foreground mb-4">
-                "Descobri mensagens entre ele e uma ex que ele jurava que nem falava mais. Se não fosse esse app, eu ainda estaria sendo enganada."
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="bg-card/90 backdrop-blur rounded-2xl p-6 border border-border shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  @J
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">@juliana_rj</p>
+                  <p className="text-xs text-muted-foreground">há 2 dias</p>
+                </div>
+              </div>
+              <p className="text-lg text-foreground mb-3">
+                Gente... descobri que meu ex tava curtindo TODAS as fotos da ex dele 😳 E eu achando que ele tinha superado kkkk esse app me salvou de passar mais vergonha
               </p>
-              <p className="font-bold text-foreground">— Juliana, RJ</p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <span>❤️ 1.2k curtidas</span>
+                <span>💬 89 comentários</span>
+              </div>
             </div>
 
-            <div className="bg-card/80 backdrop-blur rounded-xl p-8 border border-border">
-              <p className="text-xl italic text-muted-foreground mb-4">
-                "Ela dizia que era só amigo… até eu ver os directs. Foi quando decidi terminar de vez."
+            <div className="bg-card/90 backdrop-blur rounded-2xl p-6 border border-border shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  @C
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">@carlos_sp_</p>
+                  <p className="text-xs text-muted-foreground">há 1 dia</p>
+                </div>
+              </div>
+              <p className="text-lg text-foreground mb-3">
+                Cara, ela me disse que não usava mais o insta... aí vi que tava online todo dia conversando com outros caras nos directs 🤡 Terminei na hora
               </p>
-              <p className="font-bold text-foreground">— Carlos, SP</p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <span>❤️ 856 curtidas</span>
+                <span>💬 124 comentários</span>
+              </div>
             </div>
 
-            <div className="bg-card/80 backdrop-blur rounded-xl p-8 border border-border">
-              <p className="text-xl italic text-muted-foreground mb-4">
-                "Eu vivia na dúvida. Agora, com esse app, tenho certeza de tudo o que acontece quando não estou por perto."
+            <div className="bg-card/90 backdrop-blur rounded-2xl p-6 border border-border shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
+                  @B
+                </div>
+                <div>
+                  <p className="font-semibold text-sm">@bi_mg</p>
+                  <p className="text-xs text-muted-foreground">há 3 dias</p>
+                </div>
+              </div>
+              <p className="text-lg text-foreground mb-3">
+                Meninas... vocês não têm noção do que descobri sobre meu namorado 😱 Stories ocultos, conversas apagadas, seguidores bloqueados... Graças a Deus que existe esse app
               </p>
-              <p className="font-bold text-foreground">— Bianca, MG</p>
+              <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                <span>❤️ 2.1k curtidas</span>
+                <span>💬 267 comentários</span>
+              </div>
             </div>
           </div>
         </div>
