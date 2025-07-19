@@ -33,66 +33,89 @@ const SpyLanding = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
         
-        <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
+        <div className="container mx-auto px-4 py-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
+            <div className="space-y-6 animate-fade-in">
+              {/* Social Proof Numbers */}
+              <div className="flex items-center gap-6 text-sm">
+                <Badge variant="outline" className="bg-cta/10 border-cta text-cta">
+                  ⭐ 4.8★ Avaliação
+                </Badge>
+                <div className="flex items-center gap-2 text-muted-foreground">
+                  <Users className="h-4 w-4" />
+                  <span>Mais de 5.000 usuários satisfeitos</span>
+                </div>
+              </div>
+
               <div className="space-y-4">
-                <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-                  👀 Ele(a) está te{" "}
-                  <span className="text-primary">escondendo</span>{" "}
-                  algo?
+                <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+                  👀 Descubra se seu{" "}
+                  <span className="text-primary">parceiro(a)</span>{" "}
+                  te engana
                 </h1>
-                <h2 className="text-2xl lg:text-3xl text-muted-foreground">
-                  Descubra agora mesmo.
+                <h2 className="text-xl lg:text-2xl text-muted-foreground">
+                  Veja conversas secretas, curtidas ocultas e quem realmente visita o perfil — sem deixar rastros
                 </h2>
-                <p className="text-xl text-muted-foreground max-w-lg">
-                  Espie conversas, curtidas e interações no Instagram — 100% anônimo e sem deixar rastros.
-                </p>
+              </div>
+
+              <div className="space-y-3">
+                <div className="flex items-center gap-3 text-base">
+                  <Search className="h-5 w-5 text-primary" />
+                  <span>✅ Mensagens deletadas e conversas secretas</span>
+                </div>
+                <div className="flex items-center gap-3 text-base">
+                  <Heart className="h-5 w-5 text-danger" />
+                  <span>✅ Curtidas, comentários e interações ocultas</span>
+                </div>
+                <div className="flex items-center gap-3 text-base">
+                  <Eye className="h-5 w-5 text-warning" />
+                  <span>✅ Quem espia o perfil sem seguir</span>
+                </div>
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-center gap-3 text-lg">
-                  <Search className="h-5 w-5 text-primary" />
-                  <span>Mensagens secretas e conversas deletadas</span>
-                </div>
-                <div className="flex items-center gap-3 text-lg">
-                  <Heart className="h-5 w-5 text-danger" />
-                  <span>Curtidas e interações ocultas</span>
-                </div>
-                <div className="flex items-center gap-3 text-lg">
-                  <Eye className="h-5 w-5 text-warning" />
-                  <span>Quem realmente visita o perfil</span>
-                </div>
-              </div>
+                <Button variant="cta" size="xl" className="text-xl w-full lg:w-auto animate-pulse-glow">
+                  🔍 Descobrir a Verdade Agora
+                </Button>
 
-              <Button variant="cta" size="xl" className="text-xl">
-                🔍 Quero Saber a Verdade Agora
-              </Button>
-
-              <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center gap-2">
-                  <Shield className="h-4 w-4 text-cta" />
-                  <span>100% Anônimo</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-cta" />
-                  <span>Sem Instalação</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Zap className="h-4 w-4 text-cta" />
-                  <span>Resultado Imediato</span>
+                {/* Trust Seals */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-4 text-sm text-muted-foreground flex-wrap">
+                    <div className="flex items-center gap-2">
+                      <Shield className="h-4 w-4 text-cta" />
+                      <span>Criptografia AES-256</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="h-4 w-4 text-cta" />
+                      <span>100% Anônimo</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Zap className="h-4 w-4 text-cta" />
+                      <span>Resultado em 5min</span>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-card/50 backdrop-blur rounded-lg p-3 border border-cta/20">
+                    <div className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="h-4 w-4 text-cta" />
+                      <span className="text-cta font-medium">Cancelamento fácil. Sem contrato.</span>
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Uso legal e ético • Aprovação judicial quando necessário
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className="relative animate-slide-up delay-300">
+            <div className="relative animate-slide-up delay-300 order-first lg:order-last">
               <div className="relative">
                 <img 
                   src={phoneMockup}
